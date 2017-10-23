@@ -1002,7 +1002,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 === Use case: Delete person
 
 [width="100",cols="1",options="header",]
-|===
+|=======================================================================
 | *Main Success Scenario - MSS*
 
 |1.  User requests to list persons
@@ -1010,12 +1010,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |3.  User requests to delete a specific person in the list
 |4.  ConnectUs deletes the person
 |Use case ends.
-
-|===
-
-[width="100%",cols="100%",options="header",]
-|=======================================================================
-|*Extensions*
+a|*Extensions*
 |2a. The list is empty. +
 |Use case ends.
 |=======================================================================
