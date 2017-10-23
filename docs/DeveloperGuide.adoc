@@ -1129,12 +1129,14 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 === Use case: Find person
 
 |=======================================================================
+|
 |*Main Success Scenario - MSS*
 
 |1.  User requests to find person by name
 |2.  ConnectUs finds and displays the list of person(s) with their names similar to the keywords
 |Use case ends.
 
+|
 |*Extensions*
 |1a. The given command is invalid.
 |1a1. ConnectUs shows an error message.
