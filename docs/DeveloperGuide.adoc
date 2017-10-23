@@ -1023,37 +1023,27 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Add person
 
-[width="100%",cols="100%",options="header",]
 |=======================================================================
 | *Main Success Scenario - MSS*
 
 |1.  User requests to add person
 |2.  ConnectUs adds the person
 |Use case ends.
-|=======================================================================
 
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
-
 |1a. The given command is invalid.
 |1a1. ConnectUs shows an error message.
-
 |Use case resumes at step 1.
-|=======================================================================
 
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
 |1b. The given person is a duplicate of an existing person.
 |1b1. ConnectUs shows an error message.
-
 |Use case resumes at step 1.
 |=======================================================================
 
 === Use case: Edit person
 
-[width="100%",cols="100%",options="header",]
+
 |=======================================================================
 |*Main Success Scenario - MSS*
 
@@ -1061,66 +1051,39 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |2.  ConnectUs shows a list of persons
 |3.  User requests to edit a specific person in the list
 |4.  ConnectUs edits the person
-
 |Use case ends.
-|=======================================================================
 
-
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
-
 |2a. The list is empty.
-
 |Use case ends.
-|=======================================================================
 
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
 |3a. The given index is invalid.
 |3a1. ConnectUs shows an error message.
-
 |Use case resumes at step 2.
-|=======================================================================
 
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
 |3b. The given changes are a duplicate of an existing person.
-
 |3b1. ConnectUs shows an error message.
-
 |Use case resumes at step 2.
-|=======================================================================
 
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
 |3c. The given command is invalid.
-
 |3c1. ConnectUs shows an error message.
-
 |Use case resumes at step 2.
 |=======================================================================
 
 === Use case: Redo command
 
-[width="100%",cols="100%",options="header",]
+
 |=======================================================================
 |*Main Success Scenario - MSS*
 
 |1.  User requests to redo command
 |2.  ConnectUs redoes the command
-
 |Use case ends.
-|=======================================================================
 
-
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
-
 |1a. There is no command to redo.
 |1a1. ConnectUs shows an error message.
 |Use case ends.
@@ -1128,22 +1091,15 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Undo command
 
-[width="100%",cols="100%",options="header",]
 |=======================================================================
 |*Main Success Scenario - MSS*
 
 |1.  User requests to undo command
 |2.  ConnectUs undoes the command
-
 |Use case ends.
-|=======================================================================
 
-
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
-
-| 1a. There is no command to undo.
+|1a. There is no command to undo.
 |1a1. ConnectUs shows an error message.
 |Use case ends.
 |=======================================================================
@@ -1158,19 +1114,12 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |2.  ConnectUs shows a list of persons
 |3.  User requests to select a specific person in the list
 |4.  ConnectUs selects the person
-
 |Use case ends.
-|=======================================================================
 
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
 |2a. The list is empty.
 |Use case ends.
-|=======================================================================
 
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
 |3a. The given index is invalid.
 |3a1. ConnectUs shows an error message.
@@ -1179,24 +1128,16 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Find person
 
-[width="100%",cols="100%",options="header",]
 |=======================================================================
 |*Main Success Scenario - MSS*
 
 |1.  User requests to find person by name
 |2.  ConnectUs finds and displays the list of person(s) with their names similar to the keywords
-
 |Use case ends.
-|=======================================================================
 
-
-[width="100%",cols="100%",options="header",]
-|=======================================================================
 |*Extensions*
-
 |1a. The given command is invalid.
 |1a1. ConnectUs shows an error message.
-
 |Use case resumes at step 2.
 |=======================================================================
 
