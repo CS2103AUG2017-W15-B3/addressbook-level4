@@ -1001,7 +1001,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 [discrete]
 === Use case: Delete person
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 | *Main Success Scenario - MSS*
 |1.  User requests to list persons
@@ -1011,14 +1011,14 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |Use case ends.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |2a. The list is empty. +
 |Use case ends.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |3a. The given index is invalid. +
@@ -1028,7 +1028,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Add person
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 | *Main Success Scenario - MSS*
 
@@ -1037,7 +1037,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |Use case ends.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 
@@ -1047,7 +1047,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |Use case resumes at step 1.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |1b. The given person is a duplicate of an existing person.
@@ -1058,7 +1058,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Edit person
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Main Success Scenario - MSS*
 
@@ -1071,7 +1071,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |=======================================================================
 
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 
@@ -1080,7 +1080,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |Use case ends.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |3a. The given index is invalid.
@@ -1089,7 +1089,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |Use case resumes at step 2.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |3b. The given changes are a duplicate of an existing person.
@@ -1099,7 +1099,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |Use case resumes at step 2.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |3c. The given command is invalid.
@@ -1111,7 +1111,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Redo command
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Main Success Scenario - MSS*
 
@@ -1122,7 +1122,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |=======================================================================
 
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 
@@ -1133,7 +1133,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Undo command
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Main Success Scenario - MSS*
 
@@ -1144,7 +1144,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |=======================================================================
 
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 
@@ -1155,7 +1155,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Select person
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Main Success Scenario - MSS*
 
@@ -1167,14 +1167,14 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |Use case ends.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |2a. The list is empty.
 |Use case ends.
 |=======================================================================
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 |3a. The given index is invalid.
@@ -1184,7 +1184,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 === Use case: Find person
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Main Success Scenario - MSS*
 
@@ -1195,7 +1195,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |=======================================================================
 
 
-[width="100%"]
+[cols="100%"]
 |=======================================================================
 |*Extensions*
 
