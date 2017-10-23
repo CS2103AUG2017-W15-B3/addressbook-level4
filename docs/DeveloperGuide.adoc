@@ -1001,7 +1001,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 [discrete]
 === Use case: Delete person
 
-[width="100",cols="1",options="header",]
+[width="100"]
 |=======================================================================
 ^| *Main Success Scenario - MSS*
 
@@ -1010,9 +1010,11 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 |3.  User requests to delete a specific person in the list
 |4.  ConnectUs deletes the person
 |Use case ends.
+
 ^|*Extensions*
 |2a. The list is empty. +
 |Use case ends.
+
 ^|*Extensions*
 |3a. The given index is invalid. +
 |3a1. ConnectUs shows an error message. +
