@@ -1001,7 +1001,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 [discrete]
 === Use case: Delete person
 
-[cols="100%"]
+[width="100%",cols="100%",options="header",]
 |=======================================================================
 | *Main Success Scenario - MSS*
 |1.  User requests to list persons
