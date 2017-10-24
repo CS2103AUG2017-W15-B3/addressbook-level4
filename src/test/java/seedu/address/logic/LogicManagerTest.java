@@ -26,21 +26,21 @@ public class LogicManagerTest {
     private Logic logic = new LogicManager(model);
 
     @Test
-    public void execute_invalidCommandFormat_throwsParseException() {
+    public void execute_invalidCommandFormat_throwsParseException() throws Exception {
         String invalidCommand = "uicfhmowqewca";
         assertParseException(invalidCommand, MESSAGE_UNKNOWN_COMMAND);
         assertHistoryCorrect(invalidCommand);
     }
 
     @Test
-    public void execute_commandExecutionError_throwsCommandException() {
+    public void execute_commandExecutionError_throwsCommandException() throws Exception {
         String deleteCommand = "delete 9";
         assertCommandException(deleteCommand, MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
         assertHistoryCorrect(deleteCommand);
     }
 
     @Test
-    public void execute_validCommand_success() {
+    public void execute_validCommand_success() throws Exception {
         String listCommand = ListCommand.COMMAND_WORD;
         assertCommandSuccess(listCommand, ListCommand.MESSAGE_SUCCESS, model);
         assertHistoryCorrect(listCommand);

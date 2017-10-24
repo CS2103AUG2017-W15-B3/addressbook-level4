@@ -27,7 +27,7 @@ public class DeleteCommandSystemTest extends AddressBookSystemTest {
             String.format(Messages.MESSAGE_INVALID_COMMAND_FORMAT, DeleteCommand.MESSAGE_USAGE);
 
     @Test
-    public void delete() {
+    public void delete() throws Exception {
         /* ----------------- Performing delete operation while an unfiltered list is being shown -------------------- */
 
         /* Case: delete the first person in the list, command with leading spaces and trailing spaces -> deleted */

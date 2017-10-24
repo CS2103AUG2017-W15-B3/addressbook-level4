@@ -24,16 +24,18 @@ public class Person implements ReadOnlyPerson {
     private ObjectProperty<Address> address;
 
     private ObjectProperty<UniqueTagList> tags;
+    private ObjectProperty<Photo> photo;
 
     /**
      * Every field must be present and not null.
      */
-    public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags) {
-        requireAllNonNull(name, phone, email, address, tags);
+    public Person(Name name, Phone phone, Email email, Address address, Photo photo, Set<Tag> tags) {
+        requireAllNonNull(name, phone, email, address, photo, tags);
         this.name = new SimpleObjectProperty<>(name);
         this.phone = new SimpleObjectProperty<>(phone);
         this.email = new SimpleObjectProperty<>(email);
         this.address = new SimpleObjectProperty<>(address);
+        this.photo = new SimpleObjectProperty<>(photo);
         // protect internal tags from changes in the arg list
         this.tags = new SimpleObjectProperty<>(new UniqueTagList(tags));
     }
@@ -42,7 +44,7 @@ public class Person implements ReadOnlyPerson {
      * Creates a copy of the given ReadOnlyPerson.
      */
     public Person(ReadOnlyPerson source) {
-        this(source.getName(), source.getPhone(), source.getEmail(), source.getAddress(),
+        this(source.getName(), source.getPhone(), source.getEmail(), source.getAddress(), source.getPhoto(),
                 source.getTags());
     }
 
@@ -122,6 +124,20 @@ public class Person implements ReadOnlyPerson {
         tags.set(new UniqueTagList(replacement));
     }
 
+    public void setPhoto(Photo photo) {
+        this.photo.set(requireNonNull(photo));
+    }
+
+    @Override
+    public ObjectProperty<Photo> photoProperty() {
+        return photo;
+    }
+
+    @Override
+    public Photo getPhoto() {
+        return photo.get();
+    }
+
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
@@ -132,7 +148,7 @@ public class Person implements ReadOnlyPerson {
     @Override
     public int hashCode() {
         // use this method for custom fields hashing instead of implementing your own
-        return Objects.hash(name, phone, email, address, tags);
+        return Objects.hash(name, phone, email, address, photo, tags);
     }
 
     @Override
