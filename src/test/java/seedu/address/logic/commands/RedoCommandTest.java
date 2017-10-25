@@ -34,7 +34,7 @@ public class RedoCommandTest {
     }
 
     @Test
-    public void execute() {
+    public void execute() throws Exception {
         UndoRedoStack undoRedoStack = prepareStack(
                 Collections.emptyList(), Arrays.asList(deleteCommandTwo, deleteCommandOne));
         RedoCommand redoCommand = new RedoCommand();

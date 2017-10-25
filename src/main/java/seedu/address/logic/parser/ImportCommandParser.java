@@ -16,6 +16,7 @@ import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Phone;
+import seedu.address.model.person.Photo;
 import seedu.address.model.person.ReadOnlyPerson;
 import seedu.address.model.tag.Tag;
 
@@ -27,6 +28,7 @@ public class ImportCommandParser implements Parser<ImportCommand> {
     /**
      * Parses the given {@code String} of arguments in the context of the Import command
      * and returns an AddCommand object for execution.
+     *
      * @throws ParseException if the user input does not conform the expected format
      */
     public ImportCommand parse(String args) {
@@ -45,6 +47,7 @@ public class ImportCommandParser implements Parser<ImportCommand> {
             String address = null;
             String phone = null;
             Set<Tag> tagList = new HashSet<Tag>();
+            String image = null;
 
             while ((currLine = br.readLine()) != null) {
 
@@ -70,7 +73,8 @@ public class ImportCommandParser implements Parser<ImportCommand> {
                         Phone pe = new Phone(phone);
                         Email e = new Email(email);
                         Address a = new Address(address);
-                        ReadOnlyPerson person = new Person(n, pe, e, a, tagList);
+                        Photo i = new Photo(image);
+                        ReadOnlyPerson person = new Person(n, pe, e, a,  i, tagList);
                         p.add(person);
 
                     } catch (IllegalValueException ie) {

@@ -32,12 +32,12 @@ public class ListCommandTest {
     }
 
     @Test
-    public void execute_listIsNotFiltered_showsSameList() {
+    public void execute_listIsNotFiltered_showsSameList() throws Exception {
         assertCommandSuccess(listCommand, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
     }
 
     @Test
-    public void execute_listIsFiltered_showsEverything() {
+    public void execute_listIsFiltered_showsEverything()throws Exception  {
         showFirstPersonOnly(model);
         assertCommandSuccess(listCommand, model, ListCommand.MESSAGE_SUCCESS, expectedModel);
     }

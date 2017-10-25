@@ -21,6 +21,7 @@ import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Phone;
+import seedu.address.model.person.Photo;
 import seedu.address.model.person.ReadOnlyPerson;
 import seedu.address.model.person.exceptions.DuplicatePersonException;
 import seedu.address.model.person.exceptions.PersonNotFoundException;
@@ -55,7 +56,7 @@ public class EditCommand extends UndoableCommand {
     private final EditPersonDescriptor editPersonDescriptor;
 
     /**
-     * @param index of the person in the filtered person list to edit
+     * @param index                of the person in the filtered person list to edit
      * @param editPersonDescriptor details to edit the person with
      */
     public EditCommand(Index index, EditPersonDescriptor editPersonDescriptor) {
@@ -100,9 +101,10 @@ public class EditCommand extends UndoableCommand {
         Phone updatedPhone = editPersonDescriptor.getPhone().orElse(personToEdit.getPhone());
         Email updatedEmail = editPersonDescriptor.getEmail().orElse(personToEdit.getEmail());
         Address updatedAddress = editPersonDescriptor.getAddress().orElse(personToEdit.getAddress());
+        Photo updatedPhoto = editPersonDescriptor.getPhoto().orElse(personToEdit.getPhoto());
         Set<Tag> updatedTags = editPersonDescriptor.getTags().orElse(personToEdit.getTags());
 
-        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedTags);
+        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedPhoto, updatedTags);
     }
 
     @Override
@@ -133,14 +135,17 @@ public class EditCommand extends UndoableCommand {
         private Email email;
         private Address address;
         private Set<Tag> tags;
+        private Photo photo;
 
-        public EditPersonDescriptor() {}
+        public EditPersonDescriptor() {
+        }
 
         public EditPersonDescriptor(EditPersonDescriptor toCopy) {
             this.name = toCopy.name;
             this.phone = toCopy.phone;
             this.email = toCopy.email;
             this.address = toCopy.address;
+            this.photo = toCopy.photo;
             this.tags = toCopy.tags;
         }
 
@@ -191,6 +196,14 @@ public class EditCommand extends UndoableCommand {
             return Optional.ofNullable(tags);
         }
 
+        public void setPhoto(Photo photo) {
+            this.photo = photo;
+        }
+
+        public Optional<Photo> getPhoto() {
+            return Optional.ofNullable(photo);
+        }
+
         @Override
         public boolean equals(Object other) {
             // short circuit if same object
@@ -210,6 +223,7 @@ public class EditCommand extends UndoableCommand {
                     && getPhone().equals(e.getPhone())
                     && getEmail().equals(e.getEmail())
                     && getAddress().equals(e.getAddress())
+                    && getPhoto().equals(e.getPhoto())
                     && getTags().equals(e.getTags());
         }
     }
